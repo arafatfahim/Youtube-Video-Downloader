@@ -16,8 +16,8 @@ Optional: FFmpeg installed within the container for format conversions.
 How to Use:(DOCKER)
 1. Clone the repository.
 2. Build the Docker image:
-   docker build -t yourusername/youtube-downloader .
+   docker build -t arafatfahim001/youtube-downloader .
 3. Run the container:
-   docker run -p 5000:5000 yourusername/youtube-downloader
+   docker run -p 5000:5000 arafatfahim001/youtube-downloader
 4. Access the web application at
    http://localhost:5000.
