@@ -63,3 +63,7 @@ A Flask-powered web application for downloading YouTube videos and audio, with m
    ├── downloads/         # Directory for downloaded files
    └── templates/         # HTML templates for the frontend
    ```
+
+### License
+   **This project is licensed under the MIT License.**
+   ***Feel free to use, modify, and distribute the code with proper attribution.***
