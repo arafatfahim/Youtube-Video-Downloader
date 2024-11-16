@@ -1,4 +1,4 @@
-# Flask YouTube Downloader
+# YouTube Video Downloader
 
 A Flask-powered web application for downloading YouTube videos and audio, with metadata extraction and optional format conversion. This project leverages `yt-dlp` for downloading and `FFmpeg` for format conversion, providing a seamless user experience for downloading YouTube content.
 
