@@ -1,23 +1,65 @@
-# YouTube Downloader
-A lightweight and powerful Flask-based web application to download YouTube videos and audio. This application uses yt-dlp for high-speed downloading and metadata extraction, with optional format conversion via FFmpeg.
+# Flask YouTube Downloader
 
-Features:
-Fetch video metadata (title, thumbnail, duration, and upload date).
-Download YouTube videos in various formats (MP4, MKV, etc.).
-Extract and convert audio (MP3, AAC, etc.).
-Fully dockerized for easy deployment.
-Simple web-based interface for seamless usage.
+A Flask-powered web application for downloading YouTube videos and audio, with metadata extraction and optional format conversion. This project leverages `yt-dlp` for downloading and `FFmpeg` for format conversion, providing a seamless user experience for downloading YouTube content.
 
-Requirements:
-Docker installed (for containerized deployment).
-Optional: FFmpeg installed within the container for format conversions.
+---
 
+## Key Features
+- **Metadata Extraction**: Fetch video details such as title, thumbnail, duration, and upload date.
+- **Audio & Video Downloads**: Supports downloading videos in formats like MP4 or MKV and extracting audio in MP3 or AAC.
+- **Format Conversion**: Converts downloaded media into desired formats using `FFmpeg`.
+- **User-Friendly Web Interface**: Built with Flask to offer an intuitive user experience.
+- **Dockerized Deployment**: Run the app easily using Docker for a hassle-free setup.
 
-How to Use:(DOCKER)
-1. Clone the repository.
-2. Build the Docker image:
+---
+
+## Getting Started
+
+### Prerequisites
+- **Python 3.x**: Ensure Python is installed on your machine.
+- **FFmpeg**: Required for media conversion. [Install FFmpeg](https://ffmpeg.org/download.html) if not already available.
+
+### Installation Steps
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/arafatfahim/Youtube-Video-Downloader.git
+   cd youtube-downloader
+   ```
+2. **Set up a Virtual Environment (Optional)**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate    # On Windows: venv\Scripts\activate
+   ```
+   
+3. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the Application**
+   ```bash
+   flask run
+   ```
+
+   **Access the application at http://127.0.0.1:5000.**
+
+### Using Docker
+### Steps to Deploy with Docker
+1. **Build the Docker Image**
+   ```bash
    docker build -t arafatfahim001/youtube-downloader .
-3. Run the container:
+   ```
+2. **Run the Docker Container**
+   ```bash
    docker run -p 5000:5000 arafatfahim001/youtube-downloader
-4. Access the web application at
-   http://localhost:5000.
+   ```
+
+### Project Structure
+   ```bash
+   youtube-downloader/
+   ├── app.py             # Main Flask application
+   ├── requirements.txt   # Python dependencies
+   ├── Dockerfile         # Docker configuration
+   ├── downloads/         # Directory for downloaded files
+   └── templates/         # HTML templates for the frontend
+   ```
